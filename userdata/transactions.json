@@ -1,0 +1,19 @@
+{
+    "transactions": [
+        {
+            "amount": "\u20ac27.00",
+            "category": "Groceries",
+            "description": "Rewe"
+        },
+        {
+            "amount": "\u20ac130.00",
+            "category": "Tech",
+            "description": "Saturn"
+        },
+        {
+            "amount": "\u20ac10.00",
+            "category": "Cafe",
+            "description": "Starbuks"
+        }
+    ]
+}
