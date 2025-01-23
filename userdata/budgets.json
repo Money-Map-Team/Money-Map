@@ -1,0 +1,8 @@
+{
+    "budgets": [
+        {
+            "category": "Food",
+            "limit": 300.0
+        }
+    ]
+}
