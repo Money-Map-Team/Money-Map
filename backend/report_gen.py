@@ -27,7 +27,7 @@ class ReportGen:
         budget = data.get('budget', [])
 
         if not budget:
-            print("You Broke rip")
+            print("No Amount available")
             return
    
         print("\nTotal Amount: ")
