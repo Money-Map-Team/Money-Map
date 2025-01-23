@@ -1,13 +1,16 @@
 from backend.transaction_handler import TransactionHandler
+from backend.report_gen import ReportGen
 
 def main():
     transaction_handler = TransactionHandler()
+    report_generator = ReportGen()
 
     while True:
         print("\n1. Add Transaction")
         print("2. View Transactions")
         print("3. Remove Transaction")
-        print("4. Exit")
+        print("4. Generate Report")
+        print("5. Exit")
         choice = input("Choose an option: ")
 
         if choice == '1':
@@ -27,6 +30,8 @@ def main():
             except ValueError:
                 print("Invalid input. Please enter a valid index.")
         elif choice == '4':
+            report_generator.all_transactions()
+        elif choice == '5':
             break
         else:
             print("Invalid choice. Please try again.")

@@ -1,13 +1,33 @@
 #In-Progress
-class report_gen:
+from backend.user_storage import UserStorage
+from backend.transaction_handler import TransactionHandler
+
+class ReportGen:
     def __init__(self):
-        self.budget = {}
+        self.current_balance = 0
+        self.storage = UserStorage(filepath="userdata/transactions.json") 
+        self.budget = UserStorage(filepath="userdata/budgets.json") 
 
-    def update_budget(self, month, amount):
-        self.budget[month] = amount
-        self.show_changes()
 
-    def show_changes(self):
-        print("Updated Budget:")
-        for month, amount in self.budget.items():
-            print(f"{month}: ${amount}")
+    def all_transactions(self):
+        data = self.storage.readfile()
+        transactions = data.get('transactions', [])
+        
+        if not transactions:
+            print("No transactions found.")
+            return
+        
+        print("\nTransactions List:")
+        for i, transaction in enumerate(transactions):
+            print(f"{i}. Amount: {transaction['amount']} | Category: {transaction['category']} | Description: {transaction['description']}")
+
+
+    def total_budget(self):
+        data = self.storage.readfile()
+        budget = data.get('budget', [])
+
+        if not budget:
+            print("You Broke rip")
+            return
+   
+        print("\nTotal Amount: ")
