@@ -1,33 +1,40 @@
-#In-Progress
-from backend.user_storage import UserStorage
-from backend.transaction_handler import TransactionHandler
+from .transaction_handler import TransactionHandler
+from .budget_handler import BudgetHandler
 
 class ReportGen:
     def __init__(self):
-        self.current_balance = 0
-        self.storage = UserStorage(filepath="userdata/transactions.json") 
-        self.budget = UserStorage(filepath="userdata/budgets.json") 
-
+        self.transaction_handler = TransactionHandler()
+        self.budget_handler = BudgetHandler()
 
     def all_transactions(self):
-        data = self.storage.readfile()
-        transactions = data.get('transactions', [])
-        
+        transactions = self.transaction_handler.storage.readfile().get('transactions', [])
+
         if not transactions:
             print("No transactions found.")
             return
-        
+
         print("\nTransactions List:")
         for i, transaction in enumerate(transactions):
-            print(f"{i}. Amount: {transaction['amount']} | Category: {transaction['category']} | Description: {transaction['description']}")
+            print(f"{i}. Amount: €{transaction['amount']} | Category: {transaction['category']} | Description: {transaction['description']} | Date: {transaction['date']}")
 
+    def view_balance(self):
+        print("\n--- Balance ---")
+        print(f"Total Income: €{self.transaction_handler.income_storage.readfile().get('Total income', 0)}")
+        print(f"Total Expenses: €{sum(t['amount'] for t in self.transaction_handler.storage.readfile().get('transactions', []))}")
+        print(f"Current Balance: €{self.transaction_handler.current_balance}")
 
-    def total_budget(self):
-        data = self.storage.readfile()
-        budget = data.get('budget', [])
+    def view_budgets(self):
+        budgets = self.budget_handler.storage.readfile().get('budgets', [])
 
-        if not budget:
-            print("No Amount available")
+        if not budgets:
+            print("\nNo budgets set.")
             return
-   
-        print("\nTotal Amount: ")
+
+        print("\nBudgets:")
+        for budget in budgets:
+            print(f"Category: {budget['category']} | Limit: €{budget['limit']}")
+
+    def combined_report(self):
+        self.all_transactions()
+        self.view_balance()
+        self.view_budgets()

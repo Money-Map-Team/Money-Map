@@ -1,24 +1,16 @@
 {
     "transactions": [
         {
-            "amount": "\u20ac27.00",
-            "category": "Groceries",
-            "description": "Rewe"
+            "amount": 300.0,
+            "category": "Food",
+            "description": "Starbucks",
+            "date": "2025-01-23"
         },
         {
-            "amount": "\u20ac130.00",
-            "category": "Tech",
-            "description": "Saturn"
-        },
-        {
-            "amount": "\u20ac10.00",
-            "category": "Cafe",
-            "description": "Starbuks"
-        },
-        {
-            "amount": "\u20ac123.00",
-            "category": "123",
-            "description": "123"
+            "amount": 200.0,
+            "category": "Food",
+            "description": "McD",
+            "date": "2025-01-23"
         }
     ]
 }
