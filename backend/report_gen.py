@@ -13,7 +13,7 @@ class ReportGen:
             print("No transactions found.")
             return
 
-        print("\nTransactions List:")
+        print("\n--- Transactions List ---")
         for i, transaction in enumerate(transactions):
             print(f"{i}. Amount: €{transaction['amount']} | Category: {transaction['category']} | Description: {transaction['description']} | Date: {transaction['date']}")
 
@@ -30,7 +30,7 @@ class ReportGen:
             print("\nNo budgets set.")
             return
 
-        print("\nBudgets:")
+        print("\n--- Budgets ---")
         for budget in budgets:
             print(f"Category: {budget['category']} | Limit: €{budget['limit']}")
 
