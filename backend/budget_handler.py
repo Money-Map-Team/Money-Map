@@ -5,12 +5,18 @@ class BudgetHandler:
         self.storage = UserStorage(filepath="userdata/budgets.json")
 
     def set_budget(self, category, limit):
+        if limit <= 0:
+            print("Error: Budget limit must be a positive number.")
+            return
+
         data = self.storage.readfile()
         budgets = data.get('budgets', [])
 
         for budget in budgets:
             if budget['category'] == category:
-                print(f"Budget for category '{category}' already exists.")
+                print(f"Budget for category '{category}' already exists. Updating limit to €{limit}.")
+                budget['limit'] = limit
+                self.storage.writefile(data)
                 return
 
         budgets.append({'category': category, 'limit': limit})

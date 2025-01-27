@@ -1,16 +1,22 @@
 {
     "transactions": [
         {
-            "amount": 300.0,
-            "category": "Food",
-            "description": "Starbucks",
-            "date": "2025-01-23"
+            "amount": 200.0,
+            "category": "Tech",
+            "description": "Saturn",
+            "date": "2025-01-28"
         },
         {
-            "amount": 200.0,
-            "category": "Food",
-            "description": "McD",
-            "date": "2025-01-23"
+            "amount": 10.0,
+            "category": "Cafe",
+            "description": "Starbucks",
+            "date": "2025-01-28"
+        },
+        {
+            "amount": 501.0,
+            "category": "Tech",
+            "description": "Saturn",
+            "date": "2025-01-28"
         }
     ]
 }
