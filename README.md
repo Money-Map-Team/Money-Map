@@ -29,6 +29,8 @@ The platform leverages Python's simplicity and robust ecosystem to create an eff
 
 ## Project Structure
 
+![image](https://github.com/user-attachments/assets/2af78dee-de32-4075-bfe2-7816d6c7cadb)
+
 - **backend/**: Contains core backend modules:
   - `budget_handler.py`: Manages the creation, update, and deletion of budgets.
   - `transactions_handler.py`: Handles income and expense transactions.
