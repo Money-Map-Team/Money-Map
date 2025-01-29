@@ -1,5 +1,5 @@
 {
-    "income": 0,
-    "Total income": 1000.0,
-    "Income added": 1000.0
+    "total_income": 0,
+    "current_balance": 0,
+    "last_added_income": 0
 }

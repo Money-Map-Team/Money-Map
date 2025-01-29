@@ -1,8 +1,11 @@
+import os
 from .user_storage import UserStorage
 
 class BudgetHandler:
     def __init__(self):
-        self.storage = UserStorage(filepath="userdata/budgets.json")
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        userdata_path = os.path.join(base_dir, "userdata", "budgets.json") 
+        self.storage = UserStorage(filepath=userdata_path)
 
     def set_budget(self, category, limit):
         if limit <= 0:
