@@ -1,4 +1,4 @@
-![WhatsApp Image 2025-01-20 at 00 54 20](https://github.com/user-attachments/assets/c6f47f78-a165-4ab5-ac6f-6b6bf4ce66ee)
+![logo_trans](https://github.com/user-attachments/assets/a33998ac-f796-4e6c-9f1d-756c4a976355)
 # Money Map 
 
 Money Map is a budget tracker designed to help users manage their expenses and savings. This application is entirely written in Python and integrates Figma UI assets with Pillow and Tkinter to create an intuitive, user-friendly interface. The primary goal is to provide a simple yet powerful tool for users to categorize transactions, set budgets, and view financial summaries.
