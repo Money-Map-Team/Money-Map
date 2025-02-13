@@ -1,9 +1,10 @@
 ![logo_trans](https://github.com/user-attachments/assets/a33998ac-f796-4e6c-9f1d-756c4a976355)
-# Money Map 
+# Money Map
 
-Money Map is a budget tracker designed to help users manage their expenses and savings. This application is entirely written in Python and integrates Figma UI assets with Pillow and Tkinter to create an intuitive, user-friendly interface. The primary goal is to provide a simple yet powerful tool for users to categorize transactions, set budgets, and view financial summaries.
+Money Map is a personal finance management application built using Python and Tkinter. It allows users to track their income and expenses, set budgets, and visualize their financial data through interactive graphs.
 
-## Key Features
+## Features
+
 - **Categorization of transactions**: Easily categorize income and expenses.
 - **Budget creation and management**: Set up budgets and track spending.
 - **Financial summary reports and visualizations**: View financial summaries with pie charts and other visualizations.
@@ -11,64 +12,53 @@ Money Map is a budget tracker designed to help users manage their expenses and s
 - **User-friendly interface**: Integrated with Figma UI assets, enhanced with Pillow and Tkinter.
 - **Income functionality**: Supports better handling of expenses and budgeting by tracking income.
 
-## Technical Details
+## Requirements
 
-### Platform
-- **Operating System**: Windows 10/11 (32/64-bit)
-- **Programming Language**: Python 3.9 or higher recommended
-- **UI Framework**: Tkinter (Frontend) integrated with Figma UI assets (exported via Pillow)
-
-### Libraries & Tools
-- **Tkinter**: For frontend development.
-- **Pillow**: To enhance Figma UI assets for a polished look.
-- **Matplotlib**: Integrated for generating financial report visualizations like pie charts.
-- **JSON**: For file-based data storage.
-
-### Overview
-The platform leverages Python's simplicity and robust ecosystem to create an efficient, user-friendly experience. Tkinter is used for the native UI, while Figma design assets are seamlessly integrated via Pillow, ensuring a visually appealing and functional interface tailored for personal budgeting.
-
-## Project Structure
-
-![image](https://github.com/user-attachments/assets/2af78dee-de32-4075-bfe2-7816d6c7cadb)
-
-- **backend/**: Contains core backend modules:
-  - `budget_handler.py`: Manages the creation, update, and deletion of budgets.
-  - `transactions_handler.py`: Handles income and expense transactions.
-  - `user_storage.py`: Provides functionality to store and retrieve user-related data.
-  - `report_generator.py`: Generates financial summaries and visualizations, leveraging Matplotlib.
-
-- **frontend/**: Includes the user interface assets:
-  - **assets/**: Stores UI design assets exported from Figma.
-  - `assets.py`: Integrates and manages the use of these assets in the Tkinter-based application.
-
-- **userdata/**: Stores user data in JSON format:
-  - `income.json`: Contains user income data.
-  - `budgets.json`: Maintains user budget information for tracking expenses.
-  - `transactions.json`: Logs all user transactions, both income and expenses.
-
-- `Main.py`: The entry point of the application, responsible for initializing and launching the program.
-- `LICENSE`: Contains the terms and conditions under the MIT License, allowing open-source use and distribution.
-- `README.md`: Provides an overview, instructions, and details about the project for users and contributors.
+- Python 3.x
+- Tkinter
+- ttkbootstrap
+- Matplotlib
+- Pillow
 
 ## Installation and Usage
+### Installation
 
-1. Clone the repository or download the source code.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Money-Map-Team/Money-Map.git
+   cd Money-Map
+   ```
 
-2. Ensure Python is installed on your system.
+2. Create virtual environment variable:
+   ```bash
+   python -m venv .venv
+   ```
 
-3. Install required libraries using:
+3. Activate the environment:
+   ```bash
+   .\.venv\Scripts\activate
+   ```
+4. Install the required libraries:
+   ```bash
+   pip install matplotlib ttkbootstrap
+   ```
+4. Run the file:
+   ```bash
+   python main.py
+   ```
+### Usage
+- Add income or expenses with detailed descriptions and categories.
+- Set budgets for different categories and monitor your spending.
+- Visualize your financial data with interactive graphs.
+- Export your transaction data to CSV for further analysis.
 
-    ```bash
-    pip install matplotlib pillow
-    ```
+## Screenshots
 
-4. Run the application:
+![Screenshot (14)](https://github.com/user-attachments/assets/6e21f6ca-7604-4488-9480-e47051df9378)
 
-    ```bash
-    python main.py
-    ```
-
-Once the application is launched, the interface allows you to input and manage income, expenses, and transactions, providing a clear overview of your financial data. You can easily track budgets, view financial summaries, and visualize your spending. Additionally, the application supports adding and removing data as needed, ensuring seamless management of your finances.
+![WhatsApp Image 2025-02-12 at 21 05 14](https://github.com/user-attachments/assets/67a2178d-5df6-483c-a7bd-e22c5858ddb2)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+   
+   
