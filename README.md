@@ -1,65 +1,58 @@
-# Money Map
+# Money Map 💰
 
-![logo_trans](https://github.com/user-attachments/assets/a33998ac-f796-4e6c-9f1d-756c4a976355)
+![Money Map Logo](https://github.com/user-attachments/assets/a33998ac-f796-4e6c-9f1d-756c4a976355)
 
-Money Map is a personal finance management application built using Python and Tkinter. It allows users to track their income and expenses, set budgets, and visualize their financial data through interactive graphs.
+**Money Map** is a desktop-based personal finance management application built using **Python and Tkinter**.  
+It helps users track income and expenses, manage budgets, and visualize financial data through intuitive charts and summaries.
 
-## Features
+This project was developed as a collaborative academic project with a focus on **clean UI**, **practical budgeting features**, and **data visualization**.
 
-- **Categorization of transactions**: Easily categorize income and expenses.
-- **Budget creation and management**: Set up budgets and track spending.
-- **Financial summary reports and visualizations**: View financial summaries with pie charts and other visualizations.
-- **File-based storage**: Uses JSON for storing data.
-- **User-friendly interface**: Integrated with Figma UI assets, enhanced with Pillow and Tkinter.
-- **Income functionality**: Supports better handling of expenses and budgeting by tracking income.
+---
 
-## Requirements
+## ✨ Features
+
+- **Income & Expense Tracking**  
+  Add and manage income and expense transactions with categories and descriptions.
+
+- **Budget Management**  
+  Create category-wise budgets and monitor spending behavior.
+
+- **Data Visualization**  
+  Interactive pie charts and summaries using Matplotlib for better financial insights.
+
+- **File-based Persistence**  
+  Stores data locally using JSON files (no database required).
+
+- **User-Friendly Interface**  
+  Built with Tkinter, enhanced using `ttkbootstrap`, Pillow, and Figma-based UI assets.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Language**: Python 3  
+- **GUI**: Tkinter, ttkbootstrap  
+- **Visualization**: Matplotlib  
+- **Image Handling**: Pillow  
+- **Storage**: JSON files  
+
+---
+
+## 📦 Requirements
+
+Make sure you have the following installed:
 
 - Python 3.x
-- Tkinter
-- ttkbootstrap
+- Tkinter (usually included with Python)
 - Matplotlib
+- ttkbootstrap
 - Pillow
 
-## Installation and Usage
-### Installation
+---
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Money-Map-Team/Money-Map.git
-   cd Money-Map
-   ```
+## 🚀 Installation & Usage
 
-2. Create virtual environment variable:
-   ```bash
-   python -m venv .venv
-   ```
-
-3. Activate the environment:
-   ```bash
-   .\.venv\Scripts\activate
-   ```
-4. Install the required libraries:
-   ```bash
-   pip install matplotlib ttkbootstrap
-   ```
-4. Run the file:
-   ```bash
-   python main.py
-   ```
-### Usage
-- Add income or expenses with detailed descriptions and categories.
-- Set budgets for different categories and monitor your spending.
-- Visualize your financial data with interactive graphs.
-- Export your transaction data to CSV for further analysis.
-
-## Screenshots
-
-![Screenshot (14)](https://github.com/user-attachments/assets/6e21f6ca-7604-4488-9480-e47051df9378)
-
-![WhatsApp Image 2025-02-12 at 21 05 14](https://github.com/user-attachments/assets/67a2178d-5df6-483c-a7bd-e22c5858ddb2)
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-   
-   
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/Money-Map-Team/Money-Map.git
+cd Money-Map
